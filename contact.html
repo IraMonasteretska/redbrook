@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>start_project</title>
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
-    <link rel="stylesheet" href="css/lib/aos.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="pagewrapper">
+
         <header class="header">
             <div class="container">
                 <div class="row align-items-center">
@@ -32,7 +32,7 @@
                                 <li>
                                     <a href="business.html">Business</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="contact.html">Contact us</a>
                                 </li>
                             </ul>
@@ -71,83 +71,63 @@
         </header>
 
         <main class="main">
-            <section class="welcomescreen">
+            <section class="contact">
                 <div class="container">
-                    <div class="welcomescreen__inner">
-                        <img class="welcomescreen__bg" src="img/welcomescreen_bg.jpg" alt="redbrook capital partners">
-                        <div class="row justify-content-center">
-                            <div class="col-10">
-                                <div class="welcomescreen__content">
-                                    <h1 class="welcomescreen__title">
-                                        REDBROOK CAPITAL <br>PARTNERS
-                                    </h1>
+                    <div class="row align-items-end">
+                        <div class="col-lg-6">
+                            <div class="contact__content">
+                                <h1 class="contact__title">
+                                    Contact Us
+                                </h1>
+                                <div class="contact__text">
                                     <p>
-                                        An investment banking firm with extensive proficiency and transactional
-                                        knowledge in the global credit and real estate businesses
+                                        RedBrook’s Special Situations business is the legacy business at the firm,
+                                        dating back to the firm’s beginnings during the Global Financial Crisis.
                                     </p>
                                 </div>
-                                <a href="#maininfo" class="welcomescreen__btn">
-                                    <img src="img/arrow_down.svg" alt="next section">
-                                </a>
+                                <div class="contact__box">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="contact__item">
+                                                <h3>
+                                                    General Inquiries
+                                                </h3>
+                                                <a href="mailto:general@redbrookcp.com">
+                                                    general@redbrookcp.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="contact__item">
+                                                <h3>
+                                                    Jobs
+                                                </h3>
+                                                <a href="mailto:jobs@redbrookcp.com">
+                                                    jobs@redbrookcp.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="contact__item">
+                                                <h3>
+                                                    Trading
+                                                </h3>
+                                                <a href="mailto:trading@redbrookcp.com">
+                                                    trading@redbrookcp.com
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact__image">
+                                <img src="img/contact_img.png" alt="contact">
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="maininfo" id="maininfo">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-xxl-4 col-lg-5 order-2 order-lg-1">
-                            <div class="maininfo__content">
-                                <p>
-                                    RedBrook’s Special Situations business is the legacy business at the firm, dating
-                                    back to the firm’s beginnings during the Global Financial Crisis
-                                </p>
-                                <a class="redbtn" href="contact.html">
-                                    Contact Us
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xxl-6 col-lg-7 order-1 order-lg-2">
-                            <div class="maininfo__box">
-                                <div class="maininfo__item" data-aos="fade-up">
-                                    <div class="maininfo__item-number">
-                                        <div class="currency">
-                                            
-                                        </div>
-                                        <p class="counter timer count-number" data-to="7285" data-speed="4000" data-refresh-interval="50">
-                                            <!-- 7285 -->
-                                        </p>
-                                        <div class="coefficient">
-                                            
-                                        </div>
-                                    </div>
-                                    <span>
-                                        Client accounts
-                                    </span>
-                                </div>
-                                <div class="maininfo__item" data-aos="fade-up">
-                                    <div class="maininfo__item-number">
-                                        <div class="currency">
-                                            $
-                                        </div>
-                                        <p class="counter timer count-currency" data-to="815" data-speed="4000" data-refresh-interval="50">
-                                            <!-- $8.15B -->
-                                        </p>
-                                        <div class="coefficient">
-                                            B
-                                        </div>
-                                    </div>
-                                    <span>
-                                        Transactional volume
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </section>
 
 
@@ -196,12 +176,8 @@
 
 
     <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/aos.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
 
 </body>
