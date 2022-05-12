@@ -1,1 +1,102 @@
-$((function(){$(".burger-btn").on("click",(function(){$(this).toggleClass("active"),$(".mobile__menu").toggleClass("active"),$("body").toggleClass("hidden")})),$.fn.countTo=function(t){return t=t||{},$(this).each((function(){var e=$.extend({},$.fn.countTo.defaults,{from:$(this).data("from"),to:$(this).data("to"),speed:$(this).data("speed"),refreshInterval:$(this).data("refresh-interval"),decimals:$(this).data("decimals")},t),n=Math.ceil(e.speed/e.refreshInterval),a=(e.to-e.from)/n,i=this,o=$(this),r=0,l=e.from,s=o.data("countTo")||{};function c(t){var n=e.formatter.call(i,t,e);o.html(n)}o.data("countTo",s),s.interval&&clearInterval(s.interval),s.interval=setInterval((function(){r++,c(l+=a),"function"==typeof e.onUpdate&&e.onUpdate.call(i,l);r>=n&&(o.removeData("countTo"),clearInterval(s.interval),l=e.to,"function"==typeof e.onComplete&&e.onComplete.call(i,l))}),e.refreshInterval),c(l)}))},$.fn.countTo.defaults={from:0,to:0,speed:1e3,refreshInterval:100,decimals:0,formatter:function(t,e){return t.toFixed(e.decimals)},onUpdate:null,onComplete:null},$(".count-number").data("countToOptions",{formatter:function(t,e){return t.toFixed(e.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g,",")}}),$(".count-currency").data("countToOptions",{formatter:function(t,e){return t.toFixed(e.decimals).replace(/\B(?=(?:\d{2})+(?!\d))/g,".")}}),$(".timer").each((function(t){var e=$(this);t=$.extend({},t||{},e.data("countToOptions")||{}),e.countTo(t)})),$(".timeline__breakpoints-item").on("click",(function(){$(this).nextAll().removeClass("active"),$(this).prevAll().removeClass("active"),$(this).prevAll().addClass("red"),$(this).nextAll().removeClass("red"),$(this).addClass("active")})),$(".timeline__inner .timeline__breakpoints-item").on("click",(function(t){var e=$(this).attr("data-id");return $(".timeline__inner").find(".timeline__content").removeClass("active-tab").hide(),$(".timeline__inner .tabs").find(".timeline__breakpoints-item").removeClass("active"),$(this).addClass("active"),$("#"+e).addClass("active-tab").fadeIn(),!1}))}));
+
+$(function () {
+
+
+  //  ----- mobile menu ------  //
+  $('.burger-btn').on('click', function () {
+    $(this).toggleClass('active');
+    $('.mobile__menu').toggleClass('active');
+    $('body').toggleClass('hidden');
+  });
+
+
+  //  ----- graph slider ------- //
+
+  $('.graph__inner').slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    arrows: false,
+    speed: 800,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5.5,
+          slidesToScroll: 2,
+          arrows: false,
+          speed: 800,
+          infinite: false,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4.5,
+          slidesToScroll: 1,
+          arrows: false,
+          speed: 800,
+          infinite: false,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3.5,
+          slidesToScroll: 1,
+          arrows: false,
+          speed: 800,
+          infinite: false,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 1,
+          arrows: false,
+          speed: 800,
+          infinite: false,
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          arrows: false,
+          speed: 800,
+          infinite: false,
+        }
+      }
+    ]
+  });
+
+
+  // -------------- scroll to anim block ---------- //
+
+
+  $(window).scroll(function(){
+    var scrolltop = $(this).scrollTop();
+    var topHeight = $('.aboutus').height();
+      if(scrolltop >= topHeight) {
+        $('.graph__item').each(function () {
+          var newHeight = $(this).find('.graph__item-col').attr('data-height');
+          $(this).find('.graph__item-col').animate({
+            height: newHeight,
+          }, 2500);
+        });
+      }
+  });
+
+
+
+
+
+});
+
+
+
+AOS.init({
+  duration: 1000,
+  easing: 'ease-in-out-cubic'
+});
