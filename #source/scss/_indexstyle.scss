@@ -1,0 +1,171 @@
+// ------------ start welcomescreen section ------------- //
+
+.welcomescreen {
+    background-image: url(../img/dot_bg.png);
+}
+
+.welcomescreen__inner {
+    position: relative;
+    height: calc(100vh - 268px);
+    min-height: 500px;
+}
+
+.welcomescreen__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+
+}
+
+.welcomescreen__content {
+    max-width: 630px;
+    margin-bottom: 75px;
+    padding-top: 7%;
+
+    p {
+        font-size: 16px;
+        line-height: 161.5%;
+        color: #F4F2EB;
+        max-width: 440px;
+    }
+}
+
+.welcomescreen__title {
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 100%;
+    margin-bottom: 25px;
+    color: #F4F2EB;
+}
+
+.welcomescreen__btn{
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 161.5%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 9px 18px 11px;
+    position: relative;
+    &:hover{
+        color:#fff;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        bottom: 0;
+        left: 0;
+        transition: .3s;
+    }
+
+    &:before {
+        width: 2px;
+        height: 100%;
+    }
+
+    &:after {
+        content: '';
+        width: 13%;
+        height: 2px;
+    }
+
+    &:hover {
+        &:before {
+            height: 40%;
+        }
+
+        &:after {
+            width: 45%;
+        }
+    }
+}
+
+
+// ------------ end welcomescreen section ------------- //
+
+
+
+
+//  ------ RESPONSIVE ------- //
+
+@media(max-width: 1800px) {
+    .welcomescreen__title {
+        font-size: 48px;
+    }
+    .welcomescreen__inner {
+        min-height: 450px;
+    }
+
+
+}
+
+@media(max-width: 1400px) {
+    .welcomescreen__content {
+        padding-top: 80px;
+        margin-bottom: 40px;
+    }
+    .welcomescreen__inner {
+        min-height: 400px;
+    }
+}
+
+@media(max-width: 1200px) {
+
+    .welcomescreen__title {
+        font-size: 36px;
+    }
+
+}
+
+
+
+@media(max-width: 991.8px) {
+    .welcomescreen__inner {
+        height: calc(100vh - 250px);
+    }
+    .welcomescreen__content {
+        padding-top: 60px;
+    }
+}
+@media(max-width: 767.8px) {
+
+    .welcomescreen__inner {
+        height: calc(100vh - 240px);
+        min-height: 400px;
+    }
+
+    .welcomescreen__title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .welcomescreen__content {
+        margin-bottom: 40px;
+    }
+
+    .maininfo__item {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 575.8px) {
+    .welcomescreen__content p {
+        font-size: 15px;
+        line-height: 140%;
+    }
+    .welcomescreen__content {
+        padding-top: 40px;
+    }
+    .welcomescreen__btn {
+        font-size: 14px;
+        line-height: 120%;
+    }
+}

@@ -1,0 +1,16 @@
+@media (max-width: 767.8px) {
+    .main {
+        flex: inherit;
+    }
+}
+@media (min-width: 1800px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1740px;
+    }
+}

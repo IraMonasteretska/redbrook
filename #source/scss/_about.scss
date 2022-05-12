@@ -1,0 +1,199 @@
+//  ----section aboutus ------//
+
+.aboutus {
+    padding: 50px 0 150px;
+}
+
+.aboutus__content {
+    max-width: 500px;
+
+    p {
+        font-size: 16px;
+        line-height: 161.5%;
+        color: #212121;
+        margin-bottom: 70px;
+    }
+}
+
+.aboutus__title {
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 100%;
+    margin-bottom: 50px;
+    color: #212121;
+}
+
+.aboutus__img {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        max-width: 619px;
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+//  start graph section 
+.graph__title {
+    font-weight: 200;
+    font-size: 64px;
+    line-height: 100%;
+    color: #212121;
+    margin-bottom: 50px;
+}
+
+.graph__slide{
+    position: relative;
+    height: 600px;
+}
+
+
+.graph__item {
+    max-width: 190px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: #212121;
+
+    &-date {
+        font-weight: 200;
+        font-size: 17px;
+        line-height: 140%;
+        margin-bottom: 6px;
+    }
+
+    &-summ {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 100%;
+        font-feature-settings: 'pnum'on, 'lnum'on;
+    }
+}
+
+.graph__item-info {
+    margin-bottom: 12px;
+}
+
+.graph__item-col {
+    height: 0px;
+    max-height: 530px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px 10px 28px 22px;
+    border-top: 1px solid #97958D;
+    border-left: 1px solid #97958D;
+    border-right: 1px solid #97958D;
+
+    span {
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 25px;
+        
+    }
+
+    p {
+        font-weight: 200;
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 25px;
+    }
+
+    strong {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+    }
+}
+
+
+
+
+
+//    -------  RESPONSIVE -------- //
+
+@media(max-width: 1800px) {
+    .graph__item {
+        max-width: 145px;
+    }
+    .graph__item-summ {
+        font-size: 16px;
+    }
+    .graph__item-date {
+        font-size: 15px;
+    }
+    .graph__item-col {
+        padding: 28px 15px 25px 15px;
+    }
+    .graph__item-col span {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .graph__item-col p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .aboutus__title,
+    .graph__title {
+        font-size: 48px;
+    }
+
+    .aboutus {
+        padding: 50px 0 120px;
+    }
+
+
+}
+
+@media(max-width: 1200px) {
+
+    .aboutus__title,
+    .graph__title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media(max-width: 991.8px) {
+    .aboutus {
+        padding: 30px 0 90px;
+    }
+
+    .aboutus__img {
+        justify-content: center;
+    }
+
+    .aboutus__content {
+        margin-bottom: 50px;
+        max-width: 100%;
+
+        p {
+            margin-bottom: 45px;
+        }
+    }
+
+}
+
+
+
+@media(max-width: 767.8px) {
+
+    .aboutus__title,
+    .graph__title {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 400px) {
+.graph__item {
+    max-width: 180px;
+}
+}
